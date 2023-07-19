@@ -1,22 +1,14 @@
-#include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - Entry point
- * print _putchar
- * Return 0
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(void)
+
+int _putchar(char c)
 {
-	char alxprint[] = "_putchar";
-
-	int i;
-
-	for (i = 0; i < 8; i++)
-	{
-		_putchar(alxprint[i]);
-	}
-
-	//_putchar();
-	return (0);
+	return (write(1, &c, 1));
 }
