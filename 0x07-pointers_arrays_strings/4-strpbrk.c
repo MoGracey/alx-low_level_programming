@@ -7,7 +7,6 @@
  *
  * Return: return a pointer
  */
-
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int y,i;
