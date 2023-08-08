@@ -8,10 +8,17 @@
  *
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, char *srgv[])
 {
-	int arg;
-	for (arg = 0; arg < argc; arg++)
-		printf("%s\n", argv[arg]);
-	return (0);
+int count = 0;
+
+if (argc > 0)
+{
+while (count < argc)
+{
+	printf("%s\n", argv[count]);
+	count++;
+}
+}
+return (0);
 }
