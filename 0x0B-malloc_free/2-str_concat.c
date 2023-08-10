@@ -19,7 +19,7 @@ if (s2 == NULL)
 s2 = "";
 
 while (s1[length1])
-len1++;
+length1++;
 while (s2[length2])
 length2++;
 
