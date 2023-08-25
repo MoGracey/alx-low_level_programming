@@ -1,6 +1,6 @@
 #include" list.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * free_list - Frees a list_t list.
  * @head: Pointer to the head of the list.
