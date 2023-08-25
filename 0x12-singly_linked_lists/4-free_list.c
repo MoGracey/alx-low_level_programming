@@ -1,20 +1,20 @@
 #include" list.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+
 /**
  * free_list - Frees a list_t list.
  * @head: Pointer to the head of the list.
  */
-
 void free_list(list_t *head)
 {
-list_t *current;
+	list_t *node_x;
 
-while (head != NULL)
-{
-current = head;
-head = head->next;
-free(current->str);
-free(current);
-}
+	while ((node_x = head) != NULL)
+	{
+		head = head->next;
+		free(node_x->str);
+		free(node_x);
+	}
 }
