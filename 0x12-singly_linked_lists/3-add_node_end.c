@@ -1,6 +1,6 @@
-#include "main.h"
 #include <string.h>
 #include <stddef.h>
+#include "main.h"
 
 /**
  * add_node_end - Adds a new node at the end of a list_t list.
@@ -44,6 +44,7 @@ return (new_node);
 last_node = *head;
 while (last_node->next != NULL)
 last_node = last_node->next;
+
 last_node->next = new_node;
 return (new_node);
 }
