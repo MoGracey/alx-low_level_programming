@@ -4,48 +4,40 @@
 /**
  * print_opcodes - Prints the opcodes of a given function.
  * @start: Pointer to the start of the function.
- * @num_bytes: Number of opcodes to print.
- */
-
-void print_opcodes(unsigned char *start, int num_bytes)
-{
-int i;
-
-for (i = 0; i < num_bytes; i++)
-{
-printf("%02x ", start[i]);
-}
-printf("\n");
-}
-
-/**
- * main - Entry point of the program.
- * @argc: Number of command-line arguments.
- * @argv: Array containing the command-line arguments.
+ * @num_bytes: Number of opcodes to print
  *
- * Return: 0 on success, 1 for incorrect no of args, 2 for negative no of bytes
+ * Return: Always 0 (Success)
  */
 
 int main(int argc, char *argv[])
 {
-int num_bytes;
-unsigned char *main_opcodes = (unsigned char *)main;
+	int bytes, i;
+	char *arr;
 
-if (argc != 2)
-{
-printf("Error\n");
-return (1);
-}
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
 
-num_bytes = atoi(argv[1]);
+	bytes = atoi(argv[1]);
 
-if (num_bytes < 0)
-{
-printf("Error\n");
-return (2);
-}
+	if (bytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
 
-print_opcodes(main_opcodes, num_bytes);
+	arr = (char *)main;
 
-return (0);
+	for (i = 0; i < bytes; i++)
+	{
+		if (i == bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
+	}
+	return (0);
 }
