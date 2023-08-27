@@ -7,13 +7,12 @@
  * name, age, and owner values. takes a pointer to the struct dog variable as
  * its parameter and assigns the values to the members of the structure.
  */
-
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 if (d != NULL)
 {
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
+d->name = name;
+d->age = age;
+d->owner = owner;
 }
 }
